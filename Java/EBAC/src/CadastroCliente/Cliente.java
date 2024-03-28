@@ -77,7 +77,7 @@ public class Cliente {
 	
 	@Override
 	public String toString() {
-		return "\n----------\n"
+		return "\n----------"
 				+ "\n|Nome: " + getNome()
 				+ "\n|CPF: " + getCpf()
 				+ "\n|Telefone: " + getTelefone()

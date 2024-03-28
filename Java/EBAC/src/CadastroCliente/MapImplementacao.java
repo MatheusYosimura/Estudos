@@ -2,9 +2,8 @@ package CadastroCliente;
 import java.util.*;
 
 public class MapImplementacao implements IClienteDAO{
-	private Map<Long, Cliente> clientes;
+	private Map<Long, Cliente> clientes = new HashMap<Long, Cliente>();
 	
-	@Override
 	public Boolean cadastrar(Cliente cliente) {
 		if(cliente != null) {
 			clientes.put(cliente.getCpf(), cliente);
@@ -13,7 +12,6 @@ public class MapImplementacao implements IClienteDAO{
 		return false;
 	}
 
-	@Override
 	public void excluir(Long cpf) {
 		Cliente aux = consultar(cpf);
 		if (aux!=null) {
@@ -21,7 +19,6 @@ public class MapImplementacao implements IClienteDAO{
 		}
 	}
 
-	@Override
 	public void alterar(Cliente cliente) {
 		Cliente aux = consultar(cliente.getCpf());
 		if(aux!=null) {
@@ -37,8 +34,8 @@ public class MapImplementacao implements IClienteDAO{
 		
 	}
 
-	@Override
 	public Cliente consultar(Long cpf) {
+		
 		Cliente aux = this.clientes.get(cpf);
 		if(aux!=null) {
 			return aux;
@@ -46,7 +43,6 @@ public class MapImplementacao implements IClienteDAO{
 		return null;
 	}
 
-	@Override
 	public Collection<Cliente> buscarTodos() {
 		return this.clientes.values();
 	}
