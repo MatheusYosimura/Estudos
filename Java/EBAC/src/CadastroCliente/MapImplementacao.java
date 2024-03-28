@@ -46,5 +46,21 @@ public class MapImplementacao implements IClienteDAO{
 	public Collection<Cliente> buscarTodos() {
 		return this.clientes.values();
 	}
+	
+	public boolean isCamposValidos(String [] dados){
+		for(String i : dados) {
+			if(i == null || "".equals(i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean isCPFValido(String cpf) {
+		if(cpf == null || "".equals(cpf)) {
+			return false;
+		}
+		return true;
+	}
 
 }
