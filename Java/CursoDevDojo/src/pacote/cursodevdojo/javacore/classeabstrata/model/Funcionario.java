@@ -1,6 +1,6 @@
 package pacote.cursodevdojo.javacore.classeabstrata.model;
 
-public abstract class Funcionario {
+public abstract class Funcionario extends Pessoa {
 	protected String nome;
 	protected double salario;
 	public Funcionario(String nome, double salario){
