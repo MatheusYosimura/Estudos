@@ -3,15 +3,15 @@ package pacote.cursodevdojo.javacore.string.test;
 public class StringTest03 {
 	public static void main (String[] args) {
 		long inicio = System.currentTimeMillis();
-		StringConcat(1000000);
+		StringConcat(100000);
 		long fim = System.currentTimeMillis();
 		System.out.println(fim-inicio);
 		inicio = System.currentTimeMillis();
-		StringBuilderConcat(1_000_000);
+		StringBuilderConcat(100_000);
 		fim = System.currentTimeMillis();
 		System.out.println(fim-inicio);
 		inicio = System.currentTimeMillis();
-		StringBufferConcat(1_000_000);
+		StringBufferConcat(100_000);
 		fim = System.currentTimeMillis();
 		System.out.println(fim-inicio);
 	}
